@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/editTextText4"
+        android:layout_width="match_parent"
+        android:layout_height="82dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Example Text: Short-Notice Jobs" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Job Type Select" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Job Address" />
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapView2"
+        android:layout_width="match_parent"
+        android:layout_height="272dp" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editText5"
+        android:layout_width="match_parent"
+        android:layout_height="94dp"
+        android:hint="Job Description" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editText6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Optional Employee Request" />
+
+    <EditText
+        android:id="@+id/editTextText5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Example Text: Job Posting Disclaimer" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit Job" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="148dp"
+                android:layout_height="wrap_content"
+                android:text="Find" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="148dp"
+                android:layout_height="wrap_content"
+                android:text="Request" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="My Account" />
+        </LinearLayout>
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+</LinearLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/editTextText4"
+        android:layout_width="match_parent"
+        android:layout_height="82dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Example Text: Short-Notice Jobs" />
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="498dp" />
+
+    <EditText
+        android:id="@+id/editTextText5"
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Example Text: Description of Selected Job" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="148dp"
+            android:layout_height="wrap_content"
+            android:text="Find" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="148dp"
+            android:layout_height="wrap_content"
+            android:text="Request" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="My Account" />
+    </LinearLayout>
+
+</LinearLayout>
