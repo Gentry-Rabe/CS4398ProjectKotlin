@@ -1,7 +1,7 @@
-package com.laundryapp.model
+package com.laundryapp.model;
 
 // Enum for Job Status
-enum class JobStatus {
+public enum JobStatus {
     PENDING,
     ACCEPTED,
     IN_PROGRESS,

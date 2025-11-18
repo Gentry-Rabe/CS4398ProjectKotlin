@@ -1,81 +1,72 @@
-package com.laundryapp.model;
+package com.laundryapp.model
 
-import java.util.List;
-
-public class Employee {
-    private int employeeId;
-    private String name;
-    private String email;
-    private String passwordHash;
-    private PaymentInfo payAccount;
-    private double rating;
-    private List<Job> acceptedJobs;
+class Employee {
+    // Getters and Setters
+    var employeeId: Int = 0
+    var name: String? = null
+    var email: String? = null
+    var passwordHash: String? = null
+    private var payAccount: PaymentInfo? = null
+    var rating: Double = 0.0
+    private var acceptedJobs: MutableList<Job?>? = null
 
     // Constructors
-    public Employee() {}
+    constructor()
 
-    public Employee(int employeeId, String name, String email, String passwordHash) {
-        this.employeeId = employeeId;
-        this.name = name;
-        this.email = email;
-        this.passwordHash = passwordHash;
+    constructor(employeeId: Int, name: String?, email: String?, passwordHash: String?) {
+        this.employeeId = employeeId
+        this.name = name
+        this.email = email
+        this.passwordHash = passwordHash
     }
 
     // Method definitions (to be implemented)
-
-    @Override
-    public String toString() {
-        return "Employee ID: " + employeeId + ", Name: " + name + ", Email: " + email + ", Rating: " + rating;
+    override fun toString(): String {
+        return "Employee ID: " + employeeId + ", Name: " + name + ", Email: " + email + ", Rating: " + rating
     }
 
-    public void register() {
-        System.out.println("Employee " + name + " registered successfully.");
+    fun register() {
+        println("Employee " + name + " registered successfully.")
     }
 
-    public void acceptJob(Job job) {
+    fun acceptJob(job: Job) {
         if (acceptedJobs != null) {
-            acceptedJobs.add(job);
+            acceptedJobs.add(job)
         }
 
-        job.assignEmployee(this);
-        job.updateStatus(JobStatus.ACCEPTED);
+        job.assignEmployee(this)
+        job.updateStatus(JobStatus.ACCEPTED)
     }
 
-    public void updateProfile() {
-        System.out.println("Employee profile updated for: " + name);
+    fun updateProfile() {
+        println("Employee profile updated for: " + name)
     }
 
-    public void blockUser(UserAccount user) {
-        System.out.println("Employee " + name + " has blocked user: " + user.getName());
+    fun blockUser(user: UserAccount) {
+        println("Employee " + name + " has blocked user: " + user.getName())
     }
 
-    public void rateUser(UserAccount user, double rating) {
-        user.setRating(rating);
+    fun rateUser(user: UserAccount, rating: Double) {
+        user.setRating(rating)
     }
 
-    public void updateJobStatus(Job job, JobStatus status) {
-    job.updateStatus(status);
+    fun updateJobStatus(job: Job, status: JobStatus?) {
+        job.updateStatus(status)
     }
 
-    // Getters and Setters
-    public int getEmployeeId() { return employeeId; }
-    public void setEmployeeId(int employeeId) { this.employeeId = employeeId; }
+    fun getPayAccount(): PaymentInfo? {
+        return payAccount
+    }
 
-    public String getName() { return name; }
-    public void setName(String name) { this.name = name; }
+    fun setPayAccount(payAccount: PaymentInfo?) {
+        this.payAccount = payAccount
+    }
 
-    public String getEmail() { return email; }
-    public void setEmail(String email) { this.email = email; }
+    fun getAcceptedJobs(): MutableList<Job?>? {
+        return acceptedJobs
+    }
 
-    public String getPasswordHash() { return passwordHash; }
-    public void setPasswordHash(String passwordHash) { this.passwordHash = passwordHash; }
-
-    public PaymentInfo getPayAccount() { return payAccount; }
-    public void setPayAccount(PaymentInfo payAccount) { this.payAccount = payAccount; }
-
-    public double getRating() { return rating; }
-    public void setRating(double rating) { this.rating = rating; }
-
-    public List<Job> getAcceptedJobs() { return acceptedJobs; }
-    public void setAcceptedJobs(List<Job> acceptedJobs) { this.acceptedJobs = acceptedJobs; }
+    fun setAcceptedJobs(acceptedJobs: MutableList<Job?>?) {
+        this.acceptedJobs = acceptedJobs
+    }
 }

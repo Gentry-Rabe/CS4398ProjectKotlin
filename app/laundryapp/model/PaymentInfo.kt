@@ -1,44 +1,39 @@
-package com.laundryapp.model;
+package com.laundryapp.model
 
-public class PaymentInfo {
-    private String accountNumber;
-    private String bankName;
-    private String routingNumber;
-    private double balance;
+class PaymentInfo {
+    // Getters and Setters
+    var accountNumber: String? = null
+    var bankName: String? = null
+    var routingNumber: String? = null
+    var balance: Double = 0.0
 
     // Constructors
-    public PaymentInfo() {}
+    constructor()
 
-    public PaymentInfo(String accountNumber, String bankName, String routingNumber, double balance) {
-        this.accountNumber = accountNumber;
-        this.bankName = bankName;
-        this.routingNumber = routingNumber;
-        this.balance = balance;
+    constructor(
+        accountNumber: String?,
+        bankName: String?,
+        routingNumber: String?,
+        balance: Double
+    ) {
+        this.accountNumber = accountNumber
+        this.bankName = bankName
+        this.routingNumber = routingNumber
+        this.balance = balance
     }
 
     // Method definitions (to be implemented)
-    public void deposit(double amount) {
-        this.balance += amount;
+    fun deposit(amount: Double) {
+        this.balance += amount
     }
-    public void withdraw(double amount) {
+
+    fun withdraw(amount: Double) {
         if (this.balance >= amount) {
-            this.balance -= amount;
+            this.balance -= amount
         }
     }
-    public void refund(double amount) {
-        this.balance += amount;
+
+    fun refund(amount: Double) {
+        this.balance += amount
     }
-
-    // Getters and Setters
-    public String getAccountNumber() { return accountNumber; }
-    public void setAccountNumber(String accountNumber) { this.accountNumber = accountNumber; }
-
-    public String getBankName() { return bankName; }
-    public void setBankName(String bankName) { this.bankName = bankName; }
-
-    public String getRoutingNumber() { return routingNumber; }
-    public void setRoutingNumber(String routingNumber) { this.routingNumber = routingNumber; }
-
-    public double getBalance() { return balance; }
-    public void setBalance(double balance) { this.balance = balance; }
 }

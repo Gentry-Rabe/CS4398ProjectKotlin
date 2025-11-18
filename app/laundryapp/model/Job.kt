@@ -1,67 +1,68 @@
-package com.laundryapp.model;
+package com.laundryapp.model
 
-public class Job {
-    private int jobId;
-    private String description;
-    private String location;
-    private double price;
-    private JobStatus status;
-    private UserAccount user;
-    private Employee employee;
+class Job {
+    // Getters and Setters
+    var jobId: Int = 0
+    var description: String? = null
+    var location: String? = null
+    var price: Double = 0.0
+    private var status: JobStatus? = null
+    private var user: UserAccount? = null
+    private var employee: Employee? = null
 
     // Constructors
-    public Job() {}
+    constructor()
 
-    public Job(int jobId, String description, String location, double price) {
-        this.jobId = jobId;
-        this.description = description;
-        this.location = location;
-        this.price = price;
-        this.status = JobStatus.PENDING;
+    constructor(jobId: Int, description: String?, location: String?, price: Double) {
+        this.jobId = jobId
+        this.description = description
+        this.location = location
+        this.price = price
+        this.status = JobStatus.PENDING
     }
 
     // Method definitions (to be implemented)
-    public void assignEmployee(Employee employee) {
-        this.employee = employee;
+    fun assignEmployee(employee: Employee?) {
+        this.employee = employee
     }
 
-    public void updateStatus(JobStatus newStatus) {
-        this.status = newStatus;
+    fun updateStatus(newStatus: JobStatus?) {
+        this.status = newStatus
     }
 
-    public void notifyUser() {
-        System.out.println("User has been notified about job update.");
+    fun notifyUser() {
+        println("User has been notified about job update.")
     }
 
-    public void completeJob() {}
-    public void refundUser() {}
+    fun completeJob() {}
+    fun refundUser() {}
 
-    @Override
-    public String toString() {
-    return "Job ID: " + jobId + ", Status: " + status + ", Price: " + price;
+    override fun toString(): String {
+        return "Job ID: " + jobId + ", Status: " + status + ", Price: " + price
     }
 
 
+    fun getStatus(): JobStatus? {
+        return status
+    }
 
-    // Getters and Setters
-    public int getJobId() { return jobId; }
-    public void setJobId(int jobId) { this.jobId = jobId; }
+    fun setStatus(status: JobStatus?) {
+        this.status = status
+    }
 
-    public String getDescription() { return description; }
-    public void setDescription(String description) { this.description = description; }
+    fun getUser(): UserAccount? {
+        return user
+    }
 
-    public String getLocation() { return location; }
-    public void setLocation(String location) { this.location = location; }
+    fun setUser(user: UserAccount?) {
+        this.user = user
+    }
 
-    public double getPrice() { return price; }
-    public void setPrice(double price) { this.price = price; }
+    fun getEmployee(): Employee? {
+        return employee
+    }
 
-    public JobStatus getStatus() { return status; }
-    public void setStatus(JobStatus status) { this.status = status; }
-
-    public UserAccount getUser() { return user; }
-    public void setUser(UserAccount user) { this.user = user; }
-
-    public Employee getEmployee() { return employee; }
-    public void setEmployee(Employee employee) { this.employee = employee; }
+    fun setEmployee(employee: Employee?) {
+        this.employee = employee
+    }
 }
