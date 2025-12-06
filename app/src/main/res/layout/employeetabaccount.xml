@@ -58,13 +58,13 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/EmployeeFindButtonTabAccount"
             android:layout_width="148dp"
             android:layout_height="wrap_content"
             android:text="Find" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/EmployeeRequestButtonTabAccount"
             android:layout_width="148dp"
             android:layout_height="wrap_content"
             android:text="Request" />

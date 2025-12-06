@@ -40,7 +40,7 @@
         android:text="Request History" />
 
     <Button
-        android:id="@+id/button11"
+        android:id="@+id/EmployeeSignupButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Sign up as employee" />
@@ -58,7 +58,7 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/RequestButton"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:text="Request" />

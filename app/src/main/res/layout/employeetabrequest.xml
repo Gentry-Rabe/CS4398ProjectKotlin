@@ -70,7 +70,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/EmployeeFindButtonTabRequest"
                 android:layout_width="148dp"
                 android:layout_height="wrap_content"
                 android:text="Find" />
@@ -82,7 +82,7 @@
                 android:text="Request" />
 
             <Button
-                android:id="@+id/button3"
+                android:id="@+id/EmployeeAccountButtonTabRequest"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

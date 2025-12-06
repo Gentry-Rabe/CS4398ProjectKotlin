@@ -12,7 +12,7 @@ public class UserAccount {
     private List<Order> orders;
 
     public UserAccount(int userId, String name, String email, String passwordHash, String location,
-                       PaymentInfo paymentInfo, List<Order> orders) {
+    PaymentInfo paymentInfo, List<Order> orders) {
         this.userId = userId;
         this.name = name;
         this.email = email;
@@ -91,6 +91,6 @@ public class UserAccount {
                 ", location='" + location + '\'' +
                 ", paymentInfo=" + paymentInfo +
                 ", ordersCount=" + (orders != null ? orders.size() : 0) +
-                '}';
+        '}';
     }
 }
