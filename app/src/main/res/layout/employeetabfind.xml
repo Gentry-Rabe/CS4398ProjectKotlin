@@ -37,13 +37,13 @@
             android:text="Find" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/EmployeeRequestButtonTabFind"
             android:layout_width="148dp"
             android:layout_height="wrap_content"
             android:text="Request" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/EmployeeAccountButtonTabFind"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
