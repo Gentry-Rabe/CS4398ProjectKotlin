@@ -17,8 +17,8 @@
             android:layout_weight="1"
             app:srcCompat="@mipmap/profilepicture" />
 
-        <EditText
-            android:id="@+id/editTextTextMultiLine"
+        <TextView
+            android:id="@+id/userAccountPageProfileDesc"
             android:layout_width="261dp"
             android:layout_height="match_parent"
             android:ems="10"
@@ -27,19 +27,19 @@
             android:text="Example Text: User Description (name, user rating)" />
     </LinearLayout>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Edit Account Details" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button10"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Request History" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/EmployeeSignupButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -57,13 +57,13 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/RequestButton"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:text="Request" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button3"
             android:layout_width="100dp"
             android:layout_height="wrap_content"

@@ -1,7 +1,7 @@
 package com.laundryapp.service
 
-import com.laundryapp.model.Employee
-import com.laundryapp.model.UserAccount
+import com.example.fixcsproject.laundryapp.model.Employee
+import com.example.fixcsproject.laundryapp.model.UserAccount
 
 class RatingSystem {
     fun rateUser(user: UserAccount, rating: Double) {

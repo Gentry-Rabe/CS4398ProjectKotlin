@@ -1,9 +1,10 @@
-package com.laundryapp.controller;
+package com.example.fixcsproject.laundryapp.controller;
 
-import com.laundryapp.model.Employee;
-import com.laundryapp.model.Job;
-import com.laundryapp.model.JobStatus;
-import com.laundryapp.service.PaymentSystem;
+import com.example.fixcsproject.laundryapp.controller.EmployeeController;
+import com.example.fixcsproject.laundryapp.model.Employee;
+import com.example.fixcsproject.laundryapp.model.Job;
+import com.example.fixcsproject.laundryapp.model.JobStatus;
+import com.example.fixcsproject.laundryapp.service.PaymentSystem;
 import com.laundryapp.service.RatingSystem;
 
 import java.util.ArrayList;
@@ -12,7 +13,7 @@ import java.util.List;
 public class EmployeeControllerManualTest {
 
     public static void main(String[] args) {
-        System.out.println("=== EmployeeController Manual Tests ===");
+        System.out.println("=== com.example.fixcsproject.laundryapp.controller.EmployeeController Manual Tests ===");
 
         List<Employee> employees = new ArrayList<>();
         PaymentSystem paymentSystem = new PaymentSystem();

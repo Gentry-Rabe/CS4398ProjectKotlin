@@ -27,19 +27,19 @@
             android:text="Example Text: User Description (name, employee rating, job statistics)" />
     </LinearLayout>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Edit Account Details" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button10"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Work History" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button11"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -57,24 +57,24 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/EmployeeFindButtonTabAccount"
             android:layout_width="148dp"
             android:layout_height="wrap_content"
             android:text="Find" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/EmployeeRequestButtonTabAccount"
             android:layout_width="148dp"
             android:layout_height="wrap_content"
             android:text="Request" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button3"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="My Account" />
+            android:text="Account" />
     </LinearLayout>
 
 </LinearLayout>

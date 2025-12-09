@@ -1,7 +1,8 @@
-package com.laundryapp.controller;
+package com.example.fixcsproject.laundryapp.controller;
 
-import com.laundryapp.model.UserAccount;
-import com.laundryapp.service.PaymentSystem;
+import com.example.fixcsproject.laundryapp.controller.UserController;
+import com.example.fixcsproject.laundryapp.model.UserAccount;
+import com.example.fixcsproject.laundryapp.service.PaymentSystem;
 import com.laundryapp.service.RatingSystem;
 
 import java.util.ArrayList;
@@ -10,7 +11,7 @@ import java.util.List;
 public class UserControllerManualTest {
 
     public static void main(String[] args) {
-        System.out.println("=== UserController Manual Tests ===");
+        System.out.println("=== com.example.fixcsproject.laundryapp.controller.UserController Manual Tests ===");
 
         List<UserAccount> users = new ArrayList<>();
         PaymentSystem paymentSystem = new PaymentSystem();
@@ -20,6 +21,7 @@ public class UserControllerManualTest {
                 new UserController(users, paymentSystem, ratingSystem);
 
         UserAccount user = new UserAccount();
+        user.setUserId("user1");
 
         // Test registerUser
         controller.registerUser(user);
@@ -31,6 +33,6 @@ public class UserControllerManualTest {
         System.out.println("Delete user works: " +
                 (controller.getAllUsers().isEmpty()));
 
-        System.out.println("=== UserController Manual Tests Finished ===");
+        System.out.println("=== com.example.fixcsproject.laundryapp.controller.UserController Manual Tests Finished ===");
     }
 }

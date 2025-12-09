@@ -1,4 +1,4 @@
-package com.laundryapp.model;
+package com.example.fixcsproject.laundryapp.model;
 
 public class PaymentInfo {
     private String accountNumber;

@@ -1,16 +1,16 @@
-package com.laundryapp.controller;
+package com.example.fixcsproject.laundryapp.controller;
 
-import com.laundryapp.model.Job;
-import com.laundryapp.model.Employee;
-import com.laundryapp.model.UserAccount;
-import com.laundryapp.model.JobStatus;
-import com.laundryapp.service.PaymentSystem;
+import com.example.fixcsproject.laundryapp.model.Job;
+import com.example.fixcsproject.laundryapp.model.Employee;
+import com.example.fixcsproject.laundryapp.model.JobStatus;
+
+import com.example.fixcsproject.laundryapp.service.PaymentSystem;
 import com.laundryapp.service.RatingSystem;
 
 import java.util.List;
 
 public class JobController {
-    private List<Job> jobs;
+    private List<com.example.fixcsproject.laundryapp.model.Job> jobs;
     private PaymentSystem paymentSystem;
     private RatingSystem ratingSystem;
 
@@ -21,11 +21,11 @@ public class JobController {
     }
 
     // CRUD operations
-    public void createJob(Job job) {
+    public void createJob(com.example.fixcsproject.laundryapp.model.Job job) {
         jobs.add(job);
     }
 
-    public void updateJobStatus(Job job, JobStatus status) {
+    public void updateJobStatus(com.example.fixcsproject.laundryapp.model.Job job, JobStatus status) {
         job.updateStatus(status);
     }
 
@@ -35,12 +35,12 @@ public class JobController {
         employee.acceptJob(job);
     }
 
-    public void completeJob(Job job) {
+    public void completeJob(com.example.fixcsproject.laundryapp.model.Job job) {
         job.updateStatus(JobStatus.COMPLETED);
         paymentSystem.processPayment(job.getUser(), job.getEmployee(), job.getPrice());
     }
 
-    public void refundJob(Job job) {
+    public void refundJob(com.example.fixcsproject.laundryapp.model.Job job) {
         job.updateStatus(JobStatus.REFUNDED);
         paymentSystem.refundPayment(job.getUser(), job.getPrice());
     }

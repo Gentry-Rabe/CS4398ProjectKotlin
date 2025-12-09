@@ -1,21 +1,21 @@
-package app.controller;
+package com.example.fixcsproject.laundryapp.service;
 
-import app.model.UserAccount;
-import app.model.Employee;
-import app.model.Order;
-import app.model.JobStatus;
+import com.example.fixcsproject.laundryapp.model.UserAccount;
+import com.example.fixcsproject.laundryapp.model.Employee;
+import com.example.fixcsproject.laundryapp.model.JobStatus;
+import com.example.fixcsproject.laundryapp.model.Job;
 
 public class PaymentSystem {
 
     /**
-     * Process a payment for an order:
+     * Process a payment for a job:
      * 1. Withdraw money from the user.
      * 2. Deposit money into the employee's account.
      * 3. Mark the job as COMPLETED.
      */
     public void processPayment(UserAccount user, Employee employee, double amount) {
         if (user == null || employee == null) {
-            System.out.println("Payment failed: User or Employee is null.");
+            System.out.println("Payment failed: User or com.example.fixcsproject.laundryapp.model.Employee is null.");
             return;
         }
 
@@ -36,10 +36,10 @@ public class PaymentSystem {
             employee.getPaymentInfo().deposit(amount);
         }
 
-        // Update order status
-        Order order = findMatchingOrder(user, employee, amount);
-        if (order != null) {
-            order.setStatus(JobStatus.COMPLETED);
+        // Update job status
+        Job job = findMatchingJob(user, employee, amount);
+        if (job != null) {
+            job.setStatus(JobStatus.COMPLETED);
         }
 
         System.out.println("Payment of $" + amount + " processed successfully.");
@@ -49,7 +49,7 @@ public class PaymentSystem {
     /**
      * Issue a refund to a user:
      * 1. Add money back to the user's payment balance.
-     * 2. Mark the order REFUNDED.
+     * 2. Mark the job REFUNDED.
      */
     public void refundPayment(UserAccount user, double amount) {
         if (user == null || user.getPaymentInfo() == null) {
@@ -60,10 +60,10 @@ public class PaymentSystem {
         // Refund to user's balance
         user.getPaymentInfo().refund(amount);
 
-        // Update order status
-        Order order = findOrderByAmount(user, amount);
-        if (order != null) {
-            order.setStatus(JobStatus.REFUNDED);
+        // Update job status
+        Job job = findJobByAmount(user, amount);
+        if (job != null) {
+            job.setStatus(JobStatus.REFUNDED);
         }
 
         System.out.println("Refund of $" + amount + " issued successfully.");
@@ -75,21 +75,21 @@ public class PaymentSystem {
      */
     public void calculatePay(Employee employee) {
         if (employee == null) {
-            System.out.println("Cannot calculate pay: Employee is null.");
+            System.out.println("Cannot calculate pay: com.example.fixcsproject.laundryapp.model.Employee is null.");
             return;
         }
 
         double totalPay = 0.0;
 
         if (employee.getAssignedJobs() != null) {
-            for (Order job : employee.getAssignedJobs()) {
+            for (Job job : employee.getAssignedJobs()) {
                 if (job.getStatus() == JobStatus.COMPLETED) {
-                    totalPay += job.getCost();
+                    totalPay += job.getPrice();
                 }
             }
         }
 
-        System.out.println("Employee " + employee.getName() +
+        System.out.println("com.example.fixcsproject.laundryapp.model.Employee " + employee.getName() +
                 " has earned a total of $" + totalPay + " from completed jobs.");
     }
 
@@ -106,26 +106,26 @@ public class PaymentSystem {
         return false;
     }
 
-    private Order findMatchingOrder(UserAccount user, Employee employee, double amount) {
-        if (user.getOrders() == null) return null;
+    private Job findMatchingJob(UserAccount user, Employee employee, double amount) {
+        if (user.getJobs() == null) return null;
 
-        for (Order o : user.getOrders()) {
-            if (o.getEmployee() != null &&
-                o.getEmployee().equals(employee) &&
-                o.getCost() == amount) {
+        for (Job j : user.getJobs()) {
+            if (j.getEmployee() != null &&
+                j.getEmployee().equals(employee) &&
+                j.getPrice() == amount) {
 
-                return o;
+                return j;
             }
         }
         return null;
     }
 
-    private Order findOrderByAmount(UserAccount user, double amount) {
-        if (user.getOrders() == null) return null;
+    private Job findJobByAmount(UserAccount user, double amount) {
+        if (user.getJobs() == null) return null;
 
-        for (Order o : user.getOrders()) {
-            if (o.getCost() == amount) {
-                return o;
+        for (Job j : user.getJobs()) {
+            if (j.getPrice() == amount) {
+                return j;
             }
         }
         return null;

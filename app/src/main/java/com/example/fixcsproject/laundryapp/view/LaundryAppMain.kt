@@ -1,4 +1,4 @@
-package com.laundryapp.view
+package com.example.fixcsproject.laundryapp.view
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -11,6 +11,7 @@ import androidx.compose.material.icons.filled.AccountBox
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.adaptive.navigationsuite.NavigationSuiteScaffold
@@ -23,19 +24,18 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewScreenSizes
-import com.laundryapp.ui.theme.CS4398ProjectTheme
-import com.laundryapp.model.Employee
-import com.laundryapp.model.Job
-import com.laundryapp.model.JobStatus
-import com.laundryapp.model.PaymentInfo
-import com.laundryapp.model.UserAccount
-import com.laundryapp.service.PaymentSystem
+import com.example.fixcsproject.laundryapp.model.Employee
+import com.example.fixcsproject.laundryapp.model.Job
+import com.example.fixcsproject.laundryapp.model.JobStatus
+import com.example.fixcsproject.laundryapp.model.PaymentInfo
+import com.example.fixcsproject.laundryapp.model.UserAccount
+import com.example.fixcsproject.laundryapp.service.PaymentSystem
+import com.example.fixcsproject.ui.login.UserDatabase
 import com.laundryapp.service.RatingSystem
 
 class LaundryAppMain : ComponentActivity() {
-    System.out.println("Reaching 36");
+    //System.out.println("Reaching 36");
     // === System Entities ===
-    private var users: MutableList<UserAccount> = mutableListOf()
     private var employees: MutableList<Employee> = mutableListOf()
     private var jobs: MutableList<Job> = mutableListOf()
     private lateinit var paymentSystem: PaymentSystem
@@ -48,8 +48,8 @@ class LaundryAppMain : ComponentActivity() {
 
         enableEdgeToEdge()
         setContent {
-            CS4398ProjectTheme {
-                System.out.println("Reaching 52");
+            MaterialTheme {
+                //System.out.println("Reaching 52");
                 CSProjectPortApp()
             }
         }
@@ -61,7 +61,7 @@ class LaundryAppMain : ComponentActivity() {
         ratingSystem = RatingSystem()
 
         // Create placeholder users and employees
-        val user1 = UserAccount(1, "John Doe", "john@example.com", "pass123", "Austin, TX")
+        val user1 = UserAccount("JohnDoe", "John Doe", "john@example.com", "pass123", "Austin, TX", null, null)
         val emp1 = Employee(101, "Jane Smith", "jane@example.com", "securePass")
 
         val userPayInfo = PaymentInfo("123456", "Bank of Texas", "111000025", 500.00)
@@ -70,7 +70,7 @@ class LaundryAppMain : ComponentActivity() {
         val empPayInfo = PaymentInfo("654321", "Chase", "222000077", 0.00)
         emp1.payAccount = empPayInfo
 
-        users.add(user1)
+        UserDatabase.getInstance().addUser(user1)
         employees.add(emp1)
     }
 
@@ -86,7 +86,7 @@ class LaundryAppMain : ComponentActivity() {
     fun deleteUser(user: UserAccount) {
     }
 
-    // Employee-related methods
+    // com.example.fixcsproject.laundryapp.model.Employee-related methods
     fun registerEmployee(employee: Employee) {
     }
 
@@ -96,7 +96,7 @@ class LaundryAppMain : ComponentActivity() {
     fun deleteEmployee(employee: Employee) {
     }
 
-    // Job-related methods
+    // com.example.fixcsproject.laundryapp.model.Job-related methods
     fun createJob(job: Job) {
     }
 
@@ -185,7 +185,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
-    CS4398ProjectTheme {
+    MaterialTheme {
         Greeting("Android")
     }
 }

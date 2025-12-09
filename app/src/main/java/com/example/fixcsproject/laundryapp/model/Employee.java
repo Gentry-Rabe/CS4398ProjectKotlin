@@ -1,4 +1,4 @@
-package com.laundryapp.model;
+package com.example.fixcsproject.laundryapp.model;
 
 import java.util.List;
 
@@ -25,11 +25,11 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "Employee ID: " + employeeId + ", Name: " + name + ", Email: " + email + ", Rating: " + rating;
+        return "com.example.fixcsproject.laundryapp.model.Employee ID: " + employeeId + ", Name: " + name + ", Email: " + email + ", Rating: " + rating;
     }
 
     public void register() {
-        System.out.println("Employee " + name + " registered successfully.");
+        System.out.println("com.example.fixcsproject.laundryapp.model.Employee " + name + " registered successfully.");
     }
 
     public void acceptJob(Job job) {
@@ -42,11 +42,11 @@ public class Employee {
     }
 
     public void updateProfile() {
-        System.out.println("Employee profile updated for: " + name);
+        System.out.println("com.example.fixcsproject.laundryapp.model.Employee profile updated for: " + name);
     }
 
     public void blockUser(UserAccount user) {
-        System.out.println("Employee " + name + " has blocked user: " + user.getName());
+        System.out.println("com.example.fixcsproject.laundryapp.model.Employee " + name + " has blocked user: " + user.getName());
     }
 
     public void rateUser(UserAccount user, double rating) {
@@ -78,4 +78,8 @@ public class Employee {
 
     public List<Job> getAcceptedJobs() { return acceptedJobs; }
     public void setAcceptedJobs(List<Job> acceptedJobs) { this.acceptedJobs = acceptedJobs; }
+
+    public PaymentInfo getPaymentInfo() {return payAccount;}
+
+    public List<Job> getAssignedJobs() {return acceptedJobs;}
 }

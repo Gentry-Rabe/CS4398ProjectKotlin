@@ -16,7 +16,7 @@ public class PaymentSystemTest {
         PaymentInfo userPay = new PaymentInfo("111", "BOA", "001", 500.0);
         PaymentInfo empPay = new PaymentInfo("222", "Chase", "002", 0.0);
 
-        UserAccount user = new UserAccount(1, "John", "j@a.com", "pass", "Austin", userPay);
+        UserAccount user = new UserAccount("user1", "John", "j@a.com", "pass", "Austin", userPay, null);
         Employee emp = new Employee(10, "Jane", "e@a.com", "pass");
         emp.setPayAccount(empPay);
 
@@ -31,7 +31,7 @@ public class PaymentSystemTest {
     @Test
     public void testRefundPaymentRestoresUserBalance() {
         PaymentInfo userPay = new PaymentInfo("111", "BOA", "001", 100.0);
-        UserAccount user = new UserAccount(1, "John", "j@a.com", "pass", "Austin", userPay);
+        UserAccount user = new UserAccount("user1", "John", "j@a.com", "pass", "Austin", userPay, null);
 
         PaymentSystem paymentSystem = new PaymentSystem();
 

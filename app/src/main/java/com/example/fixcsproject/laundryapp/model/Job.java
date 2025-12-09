@@ -1,4 +1,4 @@
-package com.laundryapp.model;
+package com.example.fixcsproject.laundryapp.model;
 
 public class Job {
     private int jobId;
@@ -38,7 +38,7 @@ public class Job {
 
     @Override
     public String toString() {
-    return "Job ID: " + jobId + ", Status: " + status + ", Price: " + price;
+    return "com.example.fixcsproject.laundryapp.model.Job ID: " + jobId + ", Status: " + status + ", Price: " + price;
     }
 
 

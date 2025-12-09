@@ -30,24 +30,24 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button"
             android:layout_width="148dp"
             android:layout_height="wrap_content"
             android:text="Find" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/EmployeeRequestButtonTabFind"
             android:layout_width="148dp"
             android:layout_height="wrap_content"
             android:text="Request" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/EmployeeAccountButtonTabFind"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="My Account" />
+            android:text="Account" />
     </LinearLayout>
 
 </LinearLayout>

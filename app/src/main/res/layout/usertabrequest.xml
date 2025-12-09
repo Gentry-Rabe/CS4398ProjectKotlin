@@ -45,7 +45,7 @@
         android:inputType="text"
         android:text="Example Text: Job Posting Disclaimer" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -56,14 +56,14 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button2"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:text="Request" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/AccountButton"
             android:layout_width="0dp"
             android:layout_weight="1"

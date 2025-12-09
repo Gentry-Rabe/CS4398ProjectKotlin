@@ -1,32 +1,37 @@
-package app.model;
+package com.example.fixcsproject.laundryapp.model;
+
+import com.example.fixcsproject.laundryapp.model.PaymentInfo;
 
 import java.util.List;
 
 public class UserAccount {
-    private int userId;
+    private String userId;
     private String name;
     private String email;
     private String passwordHash;
     private String location;
     private PaymentInfo paymentInfo;
-    private List<Order> orders;
+    private List<Job> jobs;
+    private double rating;
 
-    public UserAccount(int userId, String name, String email, String passwordHash, String location,
-    PaymentInfo paymentInfo, List<Order> orders) {
+    public UserAccount(String userId, String name, String email, String passwordHash, String location,
+    PaymentInfo paymentInfo, List<Job> jobs) {
         this.userId = userId;
         this.name = name;
         this.email = email;
         this.passwordHash = passwordHash;
         this.location = location;
         this.paymentInfo = paymentInfo;
-        this.orders = orders;
+        this.jobs = jobs;
     }
 
-    public int getUserId() {
+    public UserAccount() {}
+
+    public String getUserId() {
         return userId;
     }
 
-    public void setUserId(int userId) {
+    public void setUserId(String userId) {
         this.userId = userId;
     }
 
@@ -70,16 +75,16 @@ public class UserAccount {
         this.paymentInfo = paymentInfo;
     }
 
-    public List<Order> getOrders() {
-        return orders;
+    public List<Job> getJobs() {
+        return jobs;
     }
 
-    public void setOrders(List<Order> orders) {
-        this.orders = orders;
+    public void setJobs(List<Job> jobs) {
+        this.jobs = jobs;
     }
 
-    public void addOrder(Order order) {
-        this.orders.add(order);
+    public void addJob(Job job) {
+        this.jobs.add(job);
     }
 
     @Override
@@ -90,7 +95,11 @@ public class UserAccount {
                 ", email='" + email + '\'' +
                 ", location='" + location + '\'' +
                 ", paymentInfo=" + paymentInfo +
-                ", ordersCount=" + (orders != null ? orders.size() : 0) +
+                ", jobsCount=" + (jobs != null ? jobs.size() : 0) +
         '}';
     }
+
+    public void setRating(double rating) {this.rating = rating;}
+
+    public double getRating() {return rating;}
 }
