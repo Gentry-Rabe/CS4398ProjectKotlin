@@ -19,8 +19,29 @@ public class UserController {
     }
 
     public void registerUser(UserAccount user) { users.add(user); }
-    public void updateUser(UserAccount user) {}
+
+    public void updateUser(UserAccount user, String username, String password, String email) {
+        if (username != null && !username.isEmpty()) {
+            user.setUsername(username);
+        }
+        if (password != null && !password.isEmpty()) {
+            user.setPassword(password);
+        }
+        if (email != null && !email.isEmpty()) {
+            user.setEmail(email);
+        }
+    }
+
     public void deleteUser(UserAccount user) { users.remove(user); }
+
+    public UserAccount getUser(String username) {
+        for (UserAccount user : users) {
+            if (user.getUsername().equals(username)) {
+                return user;
+            }
+        }
+        return null;
+    }
 
     public List<UserAccount> getAllUsers() { return users; }
 }

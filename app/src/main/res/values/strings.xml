@@ -7,6 +7,8 @@
     <string name="title_activity_employeetabaccount">EmployeeTabAccountActivity</string>
     <string name="title_activity_employeetabfind">EmployeeTabFindActivity</string>
     <string name="title_activity_employeetabrequest">EmployeeTabRequestActivity</string>
+    <string name="title_activity_useraccountedit">UserAccountEditActivity</string>
+    <string name="title_activity_employeeaccountedit">EmployeeAccountEditActivity</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
     <string name="action_sign_in">Sign in or register</string>

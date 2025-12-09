@@ -72,5 +72,17 @@
             android:label="@string/title_activity_register">
         </activity>
 
+        <activity
+            android:name="com.example.fixcsproject.ui.login.UserAccountEditActivity"
+            android:exported="true"
+            android:label="@string/title_activity_useraccountedit">
+        </activity>
+
+        <activity
+            android:name="com.example.fixcsproject.ui.login.EmployeeAccountEditActivity"
+            android:exported="true"
+            android:label="@string/title_activity_employeeaccountedit">
+        </activity>
+
     </application>
 </manifest>

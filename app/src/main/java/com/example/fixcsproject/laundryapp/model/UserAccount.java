@@ -102,4 +102,12 @@ public class UserAccount {
     public void setRating(double rating) {this.rating = rating;}
 
     public double getRating() {return rating;}
+
+    public String getPassword() {return passwordHash;}
+
+    public void setUsername(String username) {this.userId = username;}
+
+    public void setPassword(String password) {this.passwordHash = password;}
+
+    public Object getUsername() {return userId;}
 }

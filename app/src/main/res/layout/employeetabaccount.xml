@@ -34,16 +34,16 @@
         android:text="Edit Account Details" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/button10"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Work History" />
-
-    <com.google.android.material.button.MaterialButton
         android:id="@+id/button11"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Request History" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Work History" />
 
     <EditText
         android:id="@+id/editTextText7"
