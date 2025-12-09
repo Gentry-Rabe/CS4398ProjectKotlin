@@ -18,7 +18,7 @@
             app:srcCompat="@mipmap/profilepicture" />
 
         <EditText
-            android:id="@+id/editTextTextMultiLine"
+            android:id="@+id/employeeAccountPageProfileDesc"
             android:layout_width="261dp"
             android:layout_height="match_parent"
             android:ems="10"
