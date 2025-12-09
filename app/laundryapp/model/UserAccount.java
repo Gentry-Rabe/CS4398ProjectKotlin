@@ -1,4 +1,4 @@
-package app.model;
+package laundryapp.model;
 
 import java.util.List;
 
