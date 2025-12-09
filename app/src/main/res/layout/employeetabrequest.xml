@@ -5,7 +5,15 @@
     android:layout_height="match_parent">
 
     <EditText
-        android:id="@+id/editTextText4"
+        android:id="@+id/ErrorMsgEmployee"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Example Text: Short-Notice Jobs" />
+
+    <EditText
+        android:id="@+id/editTextText6"
         android:layout_width="match_parent"
         android:layout_height="82dp"
         android:ems="10"
@@ -17,7 +25,7 @@
         android:layout_height="wrap_content">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editText"
+            android:id="@+id/JobTypeEmployee"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -25,6 +33,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/jobAddressEmployee"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Job Address" />
@@ -35,13 +44,19 @@
         android:layout_height="272dp" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/editText5"
+        android:id="@+id/JobDescEmployee"
         android:layout_width="match_parent"
         android:layout_height="94dp"
         android:hint="Job Description" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/editText6"
+        android:id="@+id/JobPriceEmployee"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Job Price" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/OptReqEmployee"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Optional Employee Request" />
@@ -55,7 +70,7 @@
         android:text="Example Text: Job Posting Disclaimer" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/button4"
+        android:id="@+id/SubmitJobEmployee"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Submit Job" />
