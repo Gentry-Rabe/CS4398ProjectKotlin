@@ -24,6 +24,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewScreenSizes
+import com.example.fixcsproject.laundryapp.model.AppData
 import com.example.fixcsproject.laundryapp.model.Employee
 import com.example.fixcsproject.laundryapp.model.Job
 import com.example.fixcsproject.laundryapp.model.JobStatus
@@ -37,7 +38,6 @@ class LaundryAppMain : ComponentActivity() {
     //System.out.println("Reaching 36");
     // === System Entities ===
     private var employees: MutableList<Employee> = mutableListOf()
-    private var jobs: MutableList<Job> = mutableListOf()
     private lateinit var paymentSystem: PaymentSystem
     private lateinit var ratingSystem: RatingSystem
 
@@ -98,6 +98,7 @@ class LaundryAppMain : ComponentActivity() {
 
     // com.example.fixcsproject.laundryapp.model.Job-related methods
     fun createJob(job: Job) {
+        AppData.jobs.add(job)
     }
 
     fun assignJob(employee: Employee, job: Job) {

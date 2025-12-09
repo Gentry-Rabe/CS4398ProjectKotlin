@@ -4,18 +4,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:id="@+id/requestError"
+        android:layout_width="match_parent"
+        android:layout_height="31dp"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_red_dark" />
+
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editText"
+            android:id="@+id/JobTypeUser"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="44dp"
             android:hint="Job Type Select" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/jobAddressUser"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Job Address" />
@@ -23,16 +31,22 @@
     <com.google.android.gms.maps.MapView
         android:id="@+id/mapView2"
         android:layout_width="match_parent"
-        android:layout_height="352dp" />
+        android:layout_height="274dp" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/editText5"
+        android:id="@+id/JobDescUser"
         android:layout_width="match_parent"
         android:layout_height="94dp"
         android:hint="Job Description" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/editText6"
+        android:id="@+id/JobPriceUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Price" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/OptReqUser"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Optional Employee Request" />
@@ -46,7 +60,7 @@
         android:text="Example Text: Job Posting Disclaimer" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/button4"
+        android:id="@+id/submitJobUser"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Submit Job" />
